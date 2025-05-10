@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: tmd-api-v6
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn tmd_api_v6:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: API_SECRET_KEY
+        value: TMD_SECRET_KEY_2025
